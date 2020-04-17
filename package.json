@@ -1,0 +1,14 @@
+{
+  "name": "email-reporter",
+  "version": "0.0.1",
+  "description": "A local REST server that sends POST-ed email reports to yourself",
+  "main": "index.js",
+  "repository": "git@github.com:mikrostew/email-reporter.git",
+  "author": "Michael Stewart <mikrostew@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "volta": {
+    "node": "12.16.2",
+    "yarn": "1.22.4"
+  }
+}
