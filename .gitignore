@@ -103,5 +103,8 @@ dist
 # TernJS port file
 .tern-port
 
-# lockfiles
+# yarn lockfile
 yarn.lock
+
+# local config file
+.email-reporter
