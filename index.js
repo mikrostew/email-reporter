@@ -1,7 +1,7 @@
 const { getConfig } = require('./lib/get-config');
 const { promptForPassword } = require('./lib/prompt-for-password');
 const { sendEmail } = require('./lib/send-email');
-const { startServer } = require('./lib/rest-server');
+const { runServer } = require('./lib/rest-server');
 
 const PORT = 3000
 
@@ -20,7 +20,7 @@ async function main() {
 }
 
 async function testServer() {
-  return startServer(PORT);
+  return runServer(PORT);
 }
 
 
