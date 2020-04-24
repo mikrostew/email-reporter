@@ -1,11 +1,11 @@
 const { getConfig } = require('./lib/get-config');
 const { promptForPassword } = require('./lib/prompt-for-password');
-const { sendEmail } = require('./lib/send-email');
 const { runServer } = require('./lib/rest-server');
 
+// TODO: accept command line argument for this
 const PORT = 3000
 
-// for testing while I develop this
+// read config, prompt for password, then start the server
 async function main() {
   const config = await getConfig();
   // TODO: validate that config
@@ -13,16 +13,7 @@ async function main() {
   console.log(config);
   const password = await promptForPassword(config.smtp.user);
 
-  const subject = "Hello #2 ✔";
-  const text = "Second email"; // short summary blurb
-  const html = "This is the <b>2nd</b> email I've sent from this script.";
-  await sendEmail(subject, text, html, config, password);
+  return runServer(PORT, config, password)
 }
 
-async function testServer() {
-  return runServer(PORT);
-}
-
-
-//main().catch(console.error);
-testServer().catch(console.error);
+main().catch(console.error);
