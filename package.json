@@ -1,7 +1,7 @@
 {
   "name": "email-reporter",
   "version": "0.0.1",
-  "description": "A local REST server that sends POST-ed email reports to yourself",
+  "description": "REST server that sends POST-ed email reports to a preset email",
   "main": "index.js",
   "repository": "git@github.com:mikrostew/email-reporter.git",
   "author": "Michael Stewart <mikrostew@gmail.com>",
